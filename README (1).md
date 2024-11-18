@@ -77,32 +77,6 @@ El método **`cleanup`** detiene el robot y cierra la conexión serial de manera
 
 ---
 
-## **Instrucciones de Uso**
-
-1. **Conecte el Robot al Ordenador**
-   - Utilice un cable USB y asegúrese de conocer el puerto COM asignado al robot.
-
-2. **Configure el Puerto Serial**
-   - Si el puerto no es `COM3` (predeterminado), modifíquelo en el constructor de la clase `Epuck2Robot`:
-     ```python
-     robot = Epuck2Robot(port='COMX')  # Reemplace COMX con el puerto correspondiente
-     ```
-
-3. **Ejecución del Programa**
-   - Inicie el script principal ejecutando:
-     ```bash
-     python script.py
-     ```
-
-4. **Control mediante Teclado**
-   - **`s`**: Pausa o reanuda la ejecución.
-   - **`t`**: Detiene y apaga el robot.
-
-5. **Cierre Seguro**
-   - Cuando finalice el programa, el robot se detendrá automáticamente y la conexión serial se cerrará correctamente.
-
----
-
 ## **Detalles Técnicos**
 
 ### **Modelo de Braitenberg**
@@ -119,8 +93,8 @@ Este modelo permite que el robot gire o acelere según los estímulos detectados
 
 ### **Odometría**
 El cálculo de posiciones se basa en:
-- **Radio de las ruedas (`WHEEL_RADIUS`)**: 0.041 m.
-- **Distancia entre ruedas (`AXLE_LENGTH`)**: 0.053 m.
+- **Radio de las ruedas (`WHEEL_RADIUS`)**
+- **Distancia entre ruedas (`AXLE_LENGTH`)**
 
 La posición y orientación se actualizan mediante las siguientes fórmulas:
 - Desplazamiento promedio:
@@ -146,15 +120,3 @@ La posición y orientación se actualizan mediante las siguientes fórmulas:
   - Interrupciones externas (`Ctrl+C`).
 
 ---
-
-## **Notas y Recomendaciones**
-
-- Asegúrese de que el robot esté en un entorno seguro donde pueda moverse sin riesgo de caídas.
-- Los coeficientes de Braitenberg pueden ajustarse para obtener diferentes comportamientos (e.g., más agresivo o más conservador en la evasión de obstáculos).
-- La odometría puede acumular errores con el tiempo debido a deslizamientos de las ruedas. Considere usar métodos de localización adicionales si se requiere mayor precisión.
-
----
-
-## **Autor**
-
-Este código fue desarrollado como parte de un proyecto práctico para explorar el control autónomo de robots móviles, integrando conceptos de interacción reactiva y seguimiento de posición. ¡Disfrute experimentando con el robot!
