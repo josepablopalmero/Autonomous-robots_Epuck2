@@ -1,5 +1,5 @@
 
-# **Control de Robot e-puck2 con Comportamiento de Braitenberg y Odometría**
+# **Control del robot e-puck2 con comportamiento de Braitenberg y uso de la odometría**
 
 Este proyecto implementa un sistema de control para el robot móvil **e-puck2**, utilizando un modelo inspirado en los vehículos de **Braitenberg** para la interacción con obstáculos, junto con un seguimiento de posición y orientación basado en odometría. El robot se controla mediante una conexión serial desde un ordenador y ofrece funcionalidades de autonomía básica, pausa, y apagado a través de pulsaciones del teclado.
 
