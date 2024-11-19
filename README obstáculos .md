@@ -99,11 +99,4 @@ El cálculo de posiciones se basa en:
 La posición y orientación se actualizan mediante las siguientes fórmulas:
 ![image](https://github.com/user-attachments/assets/d478f362-2d6a-42e3-aafe-42e989d269c9)
 
-
-### **Gestión de Errores**
-- Se manejan excepciones para:
-  - Problemas en la comunicación serial.
-  - Pulsaciones inesperadas del teclado.
-  - Interrupciones externas (`Ctrl+C`).
-
 ---
