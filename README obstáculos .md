@@ -97,21 +97,8 @@ El cálculo de posiciones se basa en:
 - **Distancia entre ruedas (`AXLE_LENGTH`)**
 
 La posición y orientación se actualizan mediante las siguientes fórmulas:
-- Desplazamiento promedio:
-  \[
-  \Delta d = rac{d_	ext{izq} + d_	ext{der}}{2}
-  \]
-- Cambio de orientación:
-  \[
-  \Delta 	heta = rac{d_	ext{der} - d_	ext{izq}}{	ext{AXLE\_LENGTH}}
-  \]
-- Coordenadas nuevas:
-  \[
-  x_{	ext{nuevo}} = x + \Delta d \cdot \cos(	heta)
-  \]
-  \[
-  y_{	ext{nuevo}} = y + \Delta d \cdot \sin(	heta)
-  \]
+![image](https://github.com/user-attachments/assets/d478f362-2d6a-42e3-aafe-42e989d269c9)
+
 
 ### **Gestión de Errores**
 - Se manejan excepciones para:
