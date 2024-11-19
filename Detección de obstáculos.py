@@ -16,7 +16,7 @@ BRAITENBERG_COEFFICIENTS = [
 
 # Clase que representa el robot e-puck2 y su control
 class Epuck2Robot:
-    def __init__(self, port='COM3', baudrate=115200):
+    def __init__(self, port='COMX', baudrate=115200):
         """
         Constructor de la clase. Inicializa la comunicación serial, los comandos y parámetros.
         :param port: Puerto serial donde se conecta el robot (por defecto 'COM3').
