@@ -5,8 +5,8 @@ import math   # Librería para operaciones matemáticas, como cálculos de ángu
 import keyboard   # Para capturar pulsaciones del teclado
 
 # Constantes para los cálculos del robot
-WHEEL_RADIUS = 0.041  # Radio de las ruedas del robot en metros.
-AXLE_LENGTH = 0.053  # Distancia entre las ruedas del robot en metros.
+WHEEL_RADIUS =   # Radio de las ruedas del robot en metros.
+AXLE_LENGTH =   # Distancia entre las ruedas del robot en metros.
 RANGE = 1024 / 2  # Rango máximo de los sensores de proximidad dividido por 2.
 # Coeficientes de Braitenberg: Definen cómo cada sensor afecta la velocidad de las ruedas.
 BRAITENBERG_COEFFICIENTS = [
@@ -30,9 +30,9 @@ class Epuck2Robot:
         self.time_step = 64  # Intervalo de tiempo entre iteraciones en milisegundos.
 
         # Configuración de velocidades predefinidas
-        self.FORWARD_SPEED = 100  # Velocidad media hacia adelante.
-        self.BACKWARD_SPEED = -100  # Velocidad media hacia atrás.
-        self.TURN_SPEED = 75  # Velocidad media para giros.
+        self.FORWARD_SPEED =   # Velocidad media hacia adelante.
+        self.BACKWARD_SPEED =   # Velocidad media hacia atrás.
+        self.TURN_SPEED =   # Velocidad media para giros.
 
         # Posición inicial de los motores
         self.left_motor_position = 0.0  # Posición inicial de la rueda izquierda.
@@ -112,9 +112,10 @@ class Epuck2Robot:
         right_speed = 0.0  # Velocidad inicial de la rueda derecha.
 
         # Aplica los coeficientes de Braitenberg para ajustar las velocidades.
-        for i in range(8):
-            left_speed += BRAITENBERG_COEFFICIENTS[i][0] * (1.0 - (sensor_values[i] / RANGE))
-            right_speed += BRAITENBERG_COEFFICIENTS[i][1] * (1.0 - (sensor_values[i] / RANGE))
+        for i in range(8): 
+            #Completa el cálculo de velocidades con la expresión correspondiente
+            left_speed += 
+            right_speed += 
         
         # Multiplica por un factor para escalar las velocidades.
         return left_speed * 20, right_speed * 20
@@ -123,14 +124,16 @@ class Epuck2Robot:
         """
         Calcula la odometría del robot: posiciones (x, y) y orientación (theta).
         """
+        #Completa los campos siguientes:
+        
         # Distancias recorridas por cada rueda en el último intervalo de tiempo
-        left_distance = self.left_motor_position * WHEEL_RADIUS
-        right_distance = self.right_motor_position * WHEEL_RADIUS
+        left_distance = 
+        right_distance = 
 
         # Promedio de las distancias para el desplazamiento lineal
-        delta_distance = (right_distance + left_distance) / 2.0
+        delta_distance = 
         # Diferencia de distancias para calcular el cambio de orientación
-        delta_angle = (right_distance - left_distance) / AXLE_LENGTH
+        delta_angle = 
 
         # Actualiza la orientación del robot acumulando el cambio
         self.orientation += delta_angle
