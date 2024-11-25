@@ -88,11 +88,9 @@ class Epuck2Robot:
 
     def wall_following_logic(self, proximity):
         WALL_THRESHOLD = 200  # Umbral para detección de pared
-
-      #Completa las siguientes expresiones
-      
-        left_wall = 
-        front_wall = 
+        #left_wall_detected =  [función que devuelva si hay pared detectada a la  izquierda]
+        left_wall = proximity[5] > WALL_THRESHOLD
+        front_wall = proximity[0] > WALL_THRESHOLD or proximity[7] > WALL_THRESHOLD
 
         if left_wall and not front_wall:
             # Seguir recto
